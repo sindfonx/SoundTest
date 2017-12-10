@@ -9,20 +9,6 @@
     <script src="Build/UnityLoader.js"></script>
     <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/SoundTest.json");
-      window.addEventListener('touchstart', function() {
-
-	// create empty buffer
-	var buffer = myContext.createBuffer(1, 1, 22050);
-	var source = myContext.createBufferSource();
-	source.buffer = buffer;
-
-	// connect to output (your speakers)
-	source.connect(myContext.destination);
-
-	// play the file
-	source.noteOn(0);
-
-      }, false);
     </script>
   </head>
   <body>
