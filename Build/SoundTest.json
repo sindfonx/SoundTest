@@ -4,8 +4,6 @@
 "asmCodeUrl": "SoundTest.asm.code.unityweb",
 "asmMemoryUrl": "SoundTest.asm.memory.unityweb",
 "asmFrameworkUrl": "SoundTest.asm.framework.unityweb",
-"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
-"webglContextAttributes": {"preserveDrawingBuffer": false},
 "splashScreenStyle": "Dark",
 "backgroundColor": "#231F20"
 }
