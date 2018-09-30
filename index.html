@@ -14,6 +14,11 @@
             audio.play();
         }
 
+        function PlayAdb() {
+            var audio = document.getElementById("sound");
+            audio.play();
+        }
+
         function PlayOldAd(str) {
             var audio = document.getElementById("sound");
             audio.src = str;
@@ -31,5 +36,6 @@
         <source src="StreamingAssets/Audio/1/1.mp3" type="audio/mp3">
     </audio>
     <div id="gameContainer" style="width: 1280px; height: 720px; margin: auto"></div>
+    <button onclick="PlayAdb()">ClickMeeeeee</button>
   </body>
 </html>
