@@ -7,20 +7,29 @@
     <script src="Build/UnityLoader.js"></script>
     <script>
         var gameInstance = UnityLoader.instantiate("gameContainer", "Build/ExamBook.json");
-        var timeOut
         function PlayAd(str) {
             var audio = document.getElementById("sound");
             audio.src = str;
             var totalTime = audio.duration * 1000;
-            audio.load();
-
-            setTimeout(function () {
-                audio.pause();
-            }, 0.1);
-
-            setTimeout(function () {
-                audio.play();
-            }, 0.1);
+            var promise = audio.play();
+            audio.pause();
+            if (promise !== undefined) {
+                promise.then(_ => {
+                    audio.play();
+                    setTimeout(function () {
+                        audio.currentTime = 0;
+                        audio.pause();
+                    }, totalTime);
+                })
+                .catch(error => {
+                    audio.play();
+                    setTimeout(function () {
+                        audio = document.getElementById("sound");
+                        audio.currentTime = 0;
+                        audio.pause();
+                    }, totalTime);
+                });
+            }
         }
     </script>
     
