@@ -7,11 +7,11 @@
     <script src="Build/UnityLoader.js"></script>
     <script>
         var gameInstance = UnityLoader.instantiate("gameContainer", "Build/ExamBook.json");
-        var lagInTime;
 
         function PlayOnStart() {
+            var game = document.getElementById("gameContainer");
+            game.style.visibility = "visible";
             var audio = document.getElementById("sound");
-            audio.load();
             audio.play();
         }
 
@@ -27,6 +27,7 @@
     <audio id="sound">
         <source src="StreamingAssets/Audio/0.mp3" type="audio/mp3">
     </audio>
-    <div id="gameContainer" style="width: 1280px; height: 720px; margin: auto"></div>
+    <button onclick="PlayOnStart()" style>開始遊戲</button>
+    <div id="gameContainer" style="width: 1280px; height: 720px; margin: auto; visibility: hidden"></div>
   </body>
 </html>
