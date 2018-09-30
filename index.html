@@ -11,16 +11,13 @@
 
         function PlayOnStart() {
             var audio = document.getElementById("sound");
+            audio.load();
             audio.play();
         }
 
         function PlayAd(str) {
             var audio = document.getElementById("sound");
             audio.src = str;
-            var totalTime = audio.duration * 1000;
-            clearTimeout(lagInTime);
-            audio.pause();
-            lagInTime = setTimeout(function () { }, 0.1);
             audio.play();
         }
     </script>
