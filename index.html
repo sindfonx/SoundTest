@@ -10,7 +10,9 @@
         function PlayAd() {
             var ad = document.getElementById("sound");
             ad.play();
-            ad.pause();
+            setTimeout(function () {
+                ad.pause();
+            }, ad.duration);
         }
     </script>
     
