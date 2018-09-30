@@ -12,7 +12,15 @@
             var ad = document.getElementById("sound");
             ad.src = str;
             var totalTime = ad.duration * 1000;
-            ad.play();
+
+            setTimeout(function () {
+                ad.load();
+            }, 0.1);
+
+            setTimeout(function () {
+                ad.play();
+            }, 0.1);
+            
             setTimeout(function () {
                 ad.currentTime = 0;
                 ad.pause();
