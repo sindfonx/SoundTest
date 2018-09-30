@@ -11,7 +11,6 @@
             var ad = document.getElementById("sound");
             ad.src = str;
             var totalTime = ad.duration * 1000;
-            ad.currentTime = 0;
             ad.play();
             setTimeout(function () {
                 ad.pause();
