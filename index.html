@@ -11,10 +11,15 @@
 
         function PlayAd(str) {
             var audio = document.getElementById("sound");
+            audio.play();
+        }
+
+        function PlayOldAd(str) {
+            var audio = document.getElementById("sound");
             audio.src = str;
             var totalTime = audio.duration * 1000;
             clearTimeout(lagInTime);
-            audio.pause();
+            audio.();
             lagInTime = setTimeout(function () { }, 0.1);
             audio.play();
         }
