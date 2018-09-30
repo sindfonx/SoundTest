@@ -27,9 +27,11 @@
                         }, totalTime);
                     })
                     .catch(error => {
-                        var audio = document.getElementById("sound");
-                        audio.currentTime = 0;
-                        audio.pause();
+                        setTimeout(function () {
+                            var audio = document.getElementById("sound");
+                            audio.currentTime = 0;
+                            audio.pause();
+                        }, totalTime);
                     });
                 }
             }, 0.1);
