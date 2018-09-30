@@ -7,6 +7,14 @@
     <script src="Build/UnityLoader.js"></script>
     <script>
         var gameInstance = UnityLoader.instantiate("gameContainer", "Build/ExamBook.json");
+        var loadSound = false;
+        function LoadSound() {
+            if (loadSound == false) {
+                var audio = document.getElementById("sound");
+                audio.play();
+                loadSound = true;
+            }
+        }
 
         function PlayAd(str) {
             var audio = document.getElementById("sound");
@@ -20,6 +28,6 @@
     <audio id="sound">
         <source src="StreamingAssets/Audio/0.mp3" type="audio/mp3">
     </audio>
-    <div id="gameContainer" style="width: 1280px; height: 720px; margin: auto"></div>
+    <div onmouseover="LoadSound()" id="gameContainer" style="width: 1280px; height: 720px; margin: auto"></div>
   </body>
 </html>
