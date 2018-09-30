@@ -6,7 +6,13 @@
     <title>Unity WebGL Player | TestBook</title>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/ExamBook.json");
+        var gameInstance = UnityLoader.instantiate("gameContainer", "Build/ExamBook.json");
+
+        function PlayAudioSrc() {
+            var audio = document.getElementById("sound");
+            audio.load();
+            audio.play();
+        }
     </script>
     
   </head>
