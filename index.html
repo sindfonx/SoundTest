@@ -7,11 +7,9 @@
     <script src="Build/UnityLoader.js"></script>
     <script>
         var gameInstance = UnityLoader.instantiate("gameContainer", "Build/ExamBook.json");
-
-        function PlayAudioSrc() {
-            var audio = document.getElementById("sound");
-            audio.load();
-            audio.play();
+        function PlayAd() {
+            var ad = document.getElementById("sound");
+            ad.play();
         }
     </script>
     
@@ -20,5 +18,6 @@
     <audio id="sound" src="StreamingAssets/Audio/1/1.mp3" type="audio/mp3" codecs="mp3">
     </audio>
     <div id="gameContainer" style="width: 1280px; height: 720px; margin: auto"></div>
+    <button onclick="PlayAd" name="ClickMe">
   </body>
 </html>
