@@ -7,11 +7,11 @@
     <script src="Build/UnityLoader.js"></script>
     <script>
         var gameInstance = UnityLoader.instantiate("gameContainer", "Build/ExamBook.json");
+        var timeOut
         function PlayAd(str) {
             var ad = document.getElementById("sound");
             ad.src = str;
             var totalTime = ad.duration * 1000;
-            ad.load();
             ad.play();
             setTimeout(function () {
                 ad.currentTime = 0;
