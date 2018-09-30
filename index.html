@@ -12,30 +12,14 @@
             var audio = document.getElementById("sound");
             audio.src = str;
             var totalTime = audio.duration * 1000;
+            audio.load();
 
             setTimeout(function () {
-                audio.load();
+                audio.pause();
             }, 0.1);
 
             setTimeout(function () {
-                var promise = audio.play();
-                if (promise !== undefined) {
-                    promise.then(_ => {
-                        audio.play();
-                        setTimeout(function () {
-                            audio.currentTime = 0;
-                            audio.pause();
-                        }, totalTime);
-                    })
-                    .catch(error => {
-                        audio.play();
-                        setTimeout(function () {
-                            var audio = document.getElementById("sound");
-                            audio.currentTime = 0;
-                            audio.pause();
-                        }, totalTime);
-                    });
-                }
+                audio.play();
             }, 0.1);
         }
     </script>
