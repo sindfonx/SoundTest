@@ -19,7 +19,7 @@
             audio.src = str;
             var totalTime = audio.duration * 1000;
             clearTimeout(lagInTime);
-            audio.();
+            audio.pause();
             lagInTime = setTimeout(function () { }, 0.1);
             audio.play();
         }
