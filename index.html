@@ -9,10 +9,11 @@
         var gameInstance = UnityLoader.instantiate("gameContainer", "Build/ExamBook.json");
         function PlayAd() {
             var ad = document.getElementById("sound");
+            var totalTime = ad.duration * 1000;
             ad.play();
             setTimeout(function () {
                 ad.pause();
-            }, ad.duration);
+            }, totalTime);
         }
     </script>
     
