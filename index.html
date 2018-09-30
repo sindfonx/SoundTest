@@ -21,12 +21,14 @@
                 var promise = audio.play();
                 if (promise !== undefined) {
                     promise.then(_ => {
+                        audio.play();
                         setTimeout(function () {
                             audio.currentTime = 0;
                             audio.pause();
                         }, totalTime);
                     })
                     .catch(error => {
+                        audio.play();
                         setTimeout(function () {
                             var audio = document.getElementById("sound");
                             audio.currentTime = 0;
