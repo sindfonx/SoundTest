@@ -20,7 +20,7 @@
             setTimeout(function () {
                 var promise = audio.play();
                 if (promise !== undefined) {
-                    playPromise.then(_ => {
+                    promise.then(_ => {
                         setTimeout(function () {
                             audio.currentTime = 0;
                             audio.pause();
